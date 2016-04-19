@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+	<head> 
+		<meta charset="utf-8">
+		<title>westporch_django</title>
+	</head>
+
+	<body>
+        <div>
+            <h1><a href="">Django Blog</a></h1>
+        </div>
+    
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+
+	</body>
+
+</html>
+
